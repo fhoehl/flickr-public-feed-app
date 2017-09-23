@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="potatoPhoto">
+  <title>Photos</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <body class="w-100 sans-serif bg-white">
+    <div class="mw8 center ph3">
+      <h1 class="f1 lh-title">Flickr Public Feed</h1>
+      <div ui-view class="cf mv6"></div>
+      <div ui-view="detail"></div>
+    </div>
+  </body>
+</html>

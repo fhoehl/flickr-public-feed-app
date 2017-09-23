@@ -1,0 +1,37 @@
+<div class="near-white" ng-if="$ctrl.photo"> 
+  <a
+    ui-sref="feed"
+    class="fr near-black bg-near-white dib ph3 pv2 f6 br3 mb2 link"
+  >Back</a>
+  <a
+    ng-href="{{$ctrl.photo.link}}"
+    class="link near-white">
+      <h1 class="f4 lh-title">{{$ctrl.photo.title}}</h1>
+  </a>
+  <div class="lh-copy">
+    <a class="link blue underline-hover" href="https://flickr.com/photos/{{$ctrl.photo.author_id}}">Photo author</a><span>&nbsp;|&nbsp;</span><a>Published {{$ctrl.photo.published | date:"dd MMM yyyy 'at' HH:mm"}}</a>
+  </div>
+  <div class="flex flex-row pv4">
+    <img ng-src="{{$ctrl.photo.media.m}}" alt="{{$ctrl.photo.title}}"></img>
+    <p class="pl3" ng-bind-html="$ctrl.photo.descriptionText"></p>
+  </div>
+  <div class="cf">
+    <ul class="list pa0">
+      <li class="dib mr3">Tags:</li>
+      <li
+        class="dib mr2"
+        ng-repeat="tag in $ctrl.photo.tags"
+      >
+        <a>{{tag}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="near-white" ng-if="!$ctrl.photo">
+  <a
+    ui-sref="feed"
+    class="fr near-black bg-near-white dib ph3 pv2 f6 br3 mb2 link"
+  >Back</a>
+  <p class="pv6">Sorry. Can’t find this photo!</p>
+</div>

@@ -1,0 +1,33 @@
+<div class="flex flex-row bb b--black-10 pb3 mt3">
+  <div class="w-40">
+    <a ui-sref="feed.detail({ photoId: $ctrl.photo._id })">
+      <img
+        class="db w-100"
+        ng-src="{{$ctrl.photo.media.m}}"
+        alt="{{$ctrl.photo.title}}">
+      </img>
+    </a>
+  </div>
+  <div class="pl3 w-60">
+    <a
+      ui-sref="feed.detail({ photoId: $ctrl.photo._id })"
+      class="blue no-underline underline-hover">
+        <h1
+          class="f4 lh-title mv0 overflow-hidden nowrap"
+          style="text-overflow: ellipsis;"
+        >{{$ctrl.photo.title}}</h1>
+    </a>
+    <div class="cf">
+      <p class="dn-l lh-copy">Published {{$ctrl.photo.published | date:"dd MMM yyyy 'at' HH:mm"}}</p>
+      <a
+        class="dib blue no-underline underline-hover lh-copy"
+        href="https://flickr.com/photos/{{$ctrl.photo.author_id}}"
+        >Photo author</a>
+      <p class="dib-l dn lh-copy">Published {{$ctrl.photo.published | date:"dd MMM yyyy 'at' HH:mm"}}</p>
+      <a
+        class="dib blue no-underline underline-hover lh-copy"
+        href={{$ctrl.photo.link}}
+      >View on Flickr</a>
+    </div>
+  </div>
+</div>
