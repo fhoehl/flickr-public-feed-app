@@ -11,11 +11,11 @@ Styling is all done thanks to the wonderful [Tachyons](http://tachyons.io/).
 You need Node and Npm installed.
 
 ```bash
-cd flickr-photo-feed
+cd flickr-public-feed-app
 npm install
 ```
 
-#E Launch a live-reload development server
+## Launch a live-reload development server
 
 ```bash
 npm start
